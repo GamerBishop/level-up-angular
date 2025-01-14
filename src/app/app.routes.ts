@@ -11,6 +11,10 @@ export const routes: Routes = [
     loadComponent: () => import('../pages/settings/settings.component').then(c => c.SettingsComponent)
   },
   {
+    path: 'sign-in',
+    loadComponent: () => import('../pages/sign-in/sign-in.component').then(c => c.SignInComponent)
+  },
+  {
     path: '**',
     redirectTo: ''
   }
