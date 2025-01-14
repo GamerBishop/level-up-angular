@@ -1,0 +1,15 @@
+@if(control?.errors?.['required']) {
+  <div class="error">This field is required</div>
+}
+@if(control?.errors?.['minlength']) {
+  <div class="error">This field must be at least {{ control?.errors?.['minlength'].requiredLength }} characters</div>
+}
+@if(control?.errors?.['maxlength']) {
+  <div class="error">This field must be at most {{ control?.errors?.['maxlength'].requiredLength }} characters</div>
+}
+@if (control?.errors?.['email']) {
+  <div class="error">This field must be a valid email address</div>
+}
+@if (control?.errors?.['pattern']) {
+  <div class="error">This field must match the pattern: {{ control?.errors?.['pattern'].requiredPattern }}</div>
+}

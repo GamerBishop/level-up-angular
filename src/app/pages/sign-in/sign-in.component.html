@@ -1,0 +1,9 @@
+<!-- SignIn Form -->
+<form [formGroup]="signInForm" (ngSubmit)="SignIn()">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" formControlName="username" class="form-control" />
+    <app-form-control-error [control]="signInForm.controls['username']"></app-form-control-error>
+    <button [disabled]="signInForm.invalid" class="btn btn-primary" type="submit">Sign In</button>
+  </div>
+</form>
