@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import {FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControlErrorComponent } from "../../components/form-control-error/form-control-error.component";
 
 
 
@@ -8,7 +9,8 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular
   selector: 'app-sign-in',
   imports: [
     ReactiveFormsModule,
-  ],
+    FormControlErrorComponent
+],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })

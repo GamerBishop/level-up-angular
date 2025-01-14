@@ -3,12 +3,7 @@
   <div class="form-group">
     <label for="username">Username</label>
     <input type="text" id="username" formControlName="username" class="form-control" />
-    @if (signInForm.controls['username'].errors?.['required']) {
-      <div class="alert alert-danger">Username is required</div>
-    }
-    @if(signInForm.controls['username'].errors?.['minlength']){
-      <div class="alert alert-danger">Username must be at least 3 characters long</div>
-    }
+    <app-form-control-error [control]="signInForm.controls['username']"></app-form-control-error>
     <button [disabled]="signInForm.invalid" class="btn btn-primary" type="submit">Sign In</button>
   </div>
 </form>
