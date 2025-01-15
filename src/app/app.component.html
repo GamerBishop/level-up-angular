@@ -1,6 +1,14 @@
-<nav>
-  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:true }">Home</a>
-  <a routerLink="/settings" routerLinkActive="active">Settings</a>
-  <a routerLink="/sign-in" routerLinkActive="active">Sign In</a>
+<nav class="main-nav">
+  <div class="nav-container">
+    <div class="logo">
+      Level<span>Up</span>
+    </div>
+    <div class="nav-links">
+      <a routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLinkActive="active" routerLink="/settings">Settings</a>
+      <a routerLinkActive="active" routerLink="/sign-in">Sign In</a>
+    </div>
+  </div>
 </nav>
+
 <router-outlet></router-outlet>

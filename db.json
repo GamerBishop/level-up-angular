@@ -1,107 +1,107 @@
 {
-  "donjons": [
-      {
-          "id" : 1,
-          "level_required": 0,
-          "label": "Forêt des illusions",
-          "duration": 15,
-          "loots": {
-              "experiences": [
-                  0,
-                  500
-              ],
-              "equipments": []
-          }
-      },
-      {
-          "id": 2,
-          "level_required": 2,
-          "label": "Cité des scientifiques",
-          "duration": 25,
-          "loots": {
-              "experiences": [
-                  500,
-                  1000
-              ],
-              "equipments": []
-          }
-      },
-      {
-          "id": 3,
-          "level_required": 4,
-          "label": "Montagne des barbarres",
-          "duration": 35,
-          "loots": {
-              "experiences": [
-                  1000,
-                  2500
-              ],
-              "equipments": []
-          }
-      },
-      {
-          "id": 4,
-          "level_required": 8,
-          "label": "Grotte de l'étoile",
-          "duration": 45,
-          "loots": {
-              "experiences": [
-                  2500,
-                  5000
-              ],
-              "equipments": []
-          }
-      },
-      {
-          "id": 5,
-          "level_required": 16,
-          "label": "Terre des déchuts",
-          "duration": 55,
-          "loots": {
-              "experiences": [
-                  5000,
-                  10000
-              ],
-              "equipments": []
-          }
-      },
-      {
-          "id": 6,
-          "level_required": 32,
-          "label": "Cratère de l'éclispe",
-          "duration": 65,
-          "loots": {
-              "experiences": [
-                  10000,
-                  20000
-              ],
-              "equipments": []
-          }
-      }
-  ],
-  "profiles": [
-      {
-          "id": 1,
-          "username": "Hugo",
-          "level": 0,
-          "level_experiences": 0,
-          "moula": 500,
-          "roles": [
-              "PLAYER",
-              "ADMIN"
-          ],
-          "inventory": []
-      },
-      {
-          "id": 2,
-          "username": "John",
-          "level": 4,
-          "level_experiences": 0,
-          "moula": 1234,
-          "roles": [
-              "PLAYER"
-          ],
-          "inventory": []
-      }
-  ]
+    "donjons": [
+        {
+            "id" : 1,
+            "level_required": 0,
+            "label": "Forêt des illusions",
+            "duration": 15,
+            "loots": {
+                "experiences": [
+                    0,
+                    500
+                ],
+                "equipments": []
+            }
+        },
+        {
+            "id": 2,
+            "level_required": 2,
+            "label": "Cité des scientifiques",
+            "duration": 25,
+            "loots": {
+                "experiences": [
+                    500,
+                    1000
+                ],
+                "equipments": []
+            }
+        },
+        {
+            "id": 3,
+            "level_required": 4,
+            "label": "Montagne des barbarres",
+            "duration": 35,
+            "loots": {
+                "experiences": [
+                    1000,
+                    2500
+                ],
+                "equipments": []
+            }
+        },
+        {
+            "id": 4,
+            "level_required": 8,
+            "label": "Grotte de l'étoile",
+            "duration": 45,
+            "loots": {
+                "experiences": [
+                    2500,
+                    5000
+                ],
+                "equipments": []
+            }
+        },
+        {
+            "id": 5,
+            "level_required": 16,
+            "label": "Terre des déchuts",
+            "duration": 55,
+            "loots": {
+                "experiences": [
+                    5000,
+                    10000
+                ],
+                "equipments": []
+            }
+        },
+        {
+            "id": 6,
+            "level_required": 32,
+            "label": "Cratère de l'éclispe",
+            "duration": 65,
+            "loots": {
+                "experiences": [
+                    10000,
+                    20000
+                ],
+                "equipments": []
+            }
+        }
+    ],
+    "profiles": [
+        {
+            "id": 1,
+            "username": "william",
+            "level": 0,
+            "level_experiences": 0,
+            "moula": 500,
+            "roles": [
+                "PLAYER",
+                "ADMIN"
+            ],
+            "inventory": []
+        },
+        {
+            "id": 2,
+            "username": "John",
+            "level": 4,
+            "level_experiences": 0,
+            "moula": 1234,
+            "roles": [
+                "PLAYER"
+            ],
+            "inventory": []
+        }
+    ]
 }

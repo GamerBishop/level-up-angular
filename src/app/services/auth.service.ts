@@ -1,43 +1,42 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { effect, inject, Injectable, signal } from '@angular/core';
-import { Profile } from '../interface/profile.interface'; // Adjust the path as necessary
-import { map, catchError, Observable, throwError } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { Profile } from '../interfaces/Profile';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
-  private readonly http = inject(HttpClient);
+
+  private http = inject(HttpClient);
   public profile = signal<Profile | null>(null);
 
   constructor() {
-    const profile = localStorage.getItem('userProfile');
-    if(profile) this.profile.set(JSON.parse(profile));
+
+
+    const profile = localStorage.getItem('profile')
+    if (profile) this.profile.set(JSON.parse(profile))
 
     effect(() => {
-      const profile = this.profile();
-        localStorage.setItem('userProfile', JSON.stringify(profile));
-        console.log('Profile updated:', profile);
-    });
+      const profile = this.profile()
+      localStorage.setItem('profile', JSON.stringify(profile))
+    })
+
+    console.log(this.profile())
   }
 
-  signIn(username: string): Observable<Profile | null>{
-    console.log('Signing in as', username);
+  signIn(username: string): Observable<Profile | null> {
     return this.http
-      .get<Profile[]>(
-        'http://localhost:3000/profiles?limit=1&username=' + username
-      )
+      .get<Profile[]>('http://localhost:3000/profiles?limit=1&username=' + username)
       .pipe(
-        map((res) => {
-          if (!res.length) return null;
-          console.log('Signed in as', res[0]);
-          this.profile.set(res[0]);
-          return res[0];
-        }),
-        catchError((error: HttpErrorResponse) => {
-          console.error('Error signing in', error);
-          return throwError(() => new Error(error.message));
+        map(res => {
+          if (!res.length) return null
+          this.profile.set(res[0])
+
+          return res[0]
         })
-      );
+      )
+
   }
+
 }
